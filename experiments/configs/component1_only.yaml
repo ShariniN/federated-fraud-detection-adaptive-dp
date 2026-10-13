@@ -1,0 +1,5 @@
+# B: uncertainty-adaptive per-sample sensitivity (Component 1 on) + size-weighted FedAvg
+name: component1_only
+fl: {n_clients: 5, n_rounds: 20, local_epochs: 1, batch_size: 1024, lr: 0.001, weighting: size, mu: 0.0}
+dp: {private: true, target_epsilon: 3.0, delta: 1.0e-5, max_grad_norm: 1.0, lambda_adapt: 0.5, min_scale: 0.1, eps_uncertainty: 0.0}
+data: {processed_dir: data/processed_clean}

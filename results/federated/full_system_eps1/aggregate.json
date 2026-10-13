@@ -1,0 +1,12 @@
+{
+  "name": "full_system_eps1",
+  "n_seeds": 1,
+  "auc_pr_mean": 0.34674509207506765,
+  "auc_pr_sd": 0.0,
+  "auc_roc_mean": 0.7982892290067696,
+  "f1_mean": 0.3853820598006645,
+  "epsilon_max_mean": 0.9990421276175521,
+  "seeds": [
+    0
+  ]
+}

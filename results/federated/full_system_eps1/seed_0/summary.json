@@ -1,0 +1,14 @@
+{
+  "name": "full_system_eps1",
+  "seed": 0,
+  "auc_pr": 0.34674509207506765,
+  "auc_roc": 0.7982892290067696,
+  "f1": 0.3853820598006645,
+  "recall": 0.28829643018526885,
+  "precision": 0.581056466302368,
+  "epsilon_max": 0.9990421276175521,
+  "rounds": 20,
+  "best_auc_pr": 0.35025433072943446,
+  "seconds": 575.7451801300049,
+  "run_dir": "results\\federated\\full_system_eps1\\seed_0"
+}

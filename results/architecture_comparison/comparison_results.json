@@ -1,0 +1,55 @@
+{
+    "summary": [
+        {
+            "Architecture": "FraudMLP",
+            "Params": 2898,
+            "AUC-PR": 0.3675,
+            "AUC-ROC": 0.8437,
+            "F1_default_0.50": 0.3256,
+            "F1_calibrated": 0.3502,
+            "Best_Tau": 0.95,
+            "Recall_calibrated": 0.4623,
+            "Precision_cal": 0.2818,
+            "Threshold_optimism": 0.0,
+            "Epsilon": 0.631,
+            "Time_s": 158.2
+        },
+        {
+            "Architecture": "Logistic Regression",
+            "Params": 146,
+            "AUC-PR": 0.2843,
+            "AUC-ROC": 0.8254,
+            "F1_default_0.50": 0.2599,
+            "F1_calibrated": 0.2884,
+            "Best_Tau": 0.95,
+            "Recall_calibrated": 0.3977,
+            "Precision_cal": 0.2262,
+            "Threshold_optimism": 0.0,
+            "Epsilon": 0.631,
+            "Time_s": 111.9
+        },
+        {
+            "Architecture": "Tabular ResNet",
+            "Params": 141698,
+            "AUC-PR": 0.298,
+            "AUC-ROC": 0.8318,
+            "F1_default_0.50": 0.291,
+            "F1_calibrated": 0.3023,
+            "Best_Tau": 0.95,
+            "Recall_calibrated": 0.4962,
+            "Precision_cal": 0.2174,
+            "Threshold_optimism": 0.0,
+            "Epsilon": 0.631,
+            "Time_s": 1519.3
+        }
+    ],
+    "config": {
+        "epochs": 15,
+        "lr": 0.001,
+        "batch_size": 512,
+        "max_grad_norm": 1.0,
+        "noise_multiplier": 1.0,
+        "target_delta": 1e-05
+    },
+    "dataset": "real_ieee_cis_clean"
+}

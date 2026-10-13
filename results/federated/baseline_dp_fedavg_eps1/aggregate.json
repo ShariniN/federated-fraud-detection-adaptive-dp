@@ -1,0 +1,12 @@
+{
+  "name": "baseline_dp_fedavg_eps1",
+  "n_seeds": 1,
+  "auc_pr_mean": 0.34581598239392897,
+  "auc_pr_sd": 0.0,
+  "auc_roc_mean": 0.7985119151747393,
+  "f1_mean": 0.37976190476190474,
+  "epsilon_max_mean": 0.9990421276175521,
+  "seeds": [
+    0
+  ]
+}

@@ -1,0 +1,1700 @@
+{
+  "config": {
+    "name": "baseline_dp_fedavg_eps3",
+    "fl": {
+      "n_clients": 5,
+      "n_rounds": 20,
+      "local_epochs": 1,
+      "batch_size": 1024,
+      "lr": 0.001,
+      "weighting": "size",
+      "mu": 0.0,
+      "u_floor": 0.05,
+      "clip_lo": 0.5,
+      "clip_hi": 2.0,
+      "trim_ratio": 0.2
+    },
+    "dp": {
+      "private": true,
+      "target_epsilon": 3.0,
+      "delta": 1e-05,
+      "max_grad_norm": 1.0,
+      "lambda_adapt": 0.0,
+      "min_scale": 0.1,
+      "eps_uncertainty": 0.0,
+      "sigma": null
+    },
+    "data": {
+      "processed_dir": "data/processed_clean"
+    },
+    "attack": {
+      "malicious_clients": [],
+      "type": null,
+      "replacement_boost": 5.0
+    }
+  },
+  "seed": 0,
+  "history": [
+    {
+      "round": 0,
+      "global": {
+        "auc_pr": 0.11573306349375975,
+        "auc_roc": 0.7099798954811144,
+        "tau_source": "calibration",
+        "tau": 0.98,
+        "f1": 0.16510703755928727,
+        "recall": 0.5820153637596024,
+        "precision": 0.09619837179774442,
+        "confusion": {
+          "tn": 44740,
+          "fp": 12101,
+          "fn": 925,
+          "tp": 1288
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "epsilon_max": 0.0,
+      "epsilon_mean": 0.0
+    },
+    {
+      "round": 1,
+      "global": {
+        "auc_pr": 0.14172736145766518,
+        "auc_roc": 0.5857939294326799,
+        "tau_source": "calibration",
+        "tau": 0.04,
+        "f1": 0.22711219777234448,
+        "recall": 0.18888386805241753,
+        "precision": 0.2847411444141689,
+        "confusion": {
+          "tn": 55791,
+          "fp": 1050,
+          "fn": 1795,
+          "tp": 418
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 0.7331746384775495,
+          "uncertainty": 0.5675426721572876,
+          "uncertainty_raw": 0.5675426721572876,
+          "train_loss": 1.4131278666582974,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3398416537255824,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 0.9525498122422239,
+          "uncertainty": 0.2002318650484085,
+          "uncertainty_raw": 0.2002318650484085,
+          "train_loss": 1.5661457582961682,
+          "mean_clip_scale": 1.0,
+          "update_norm": 1.1571161747646614,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 0.8363880724815224,
+          "uncertainty": 0.22904999554157257,
+          "uncertainty_raw": 0.22904999554157257,
+          "train_loss": 1.5809958597709393,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.879760196937571,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 0.7331746384775495,
+          "uncertainty": 0.5761605501174927,
+          "uncertainty_raw": 0.5761605501174927,
+          "train_loss": 1.5942486199465664,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.34020279110969454,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 1.6894140190451963,
+          "uncertainty": 0.021347958594560623,
+          "uncertainty_raw": 0.021347958594560623,
+          "train_loss": 4.869050020023304,
+          "mean_clip_scale": 1.0,
+          "update_norm": 2.263721712368553,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 1.6894140190451963,
+      "epsilon_mean": 0.9889402361448084,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 10.823208093643188
+    },
+    {
+      "round": 2,
+      "global": {
+        "auc_pr": 0.2092778551186125,
+        "auc_roc": 0.687665356593244,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.2469055374592834,
+        "recall": 0.17126073203795752,
+        "precision": 0.44224037339556593,
+        "confusion": {
+          "tn": 56363,
+          "fp": 478,
+          "fn": 1834,
+          "tp": 379
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 0.9769377662857635,
+          "uncertainty": 0.024901678785681725,
+          "uncertainty_raw": 0.024901678785681725,
+          "train_loss": 4.078885208476674,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21984308560530647,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 1.118629775507546,
+          "uncertainty": 0.1315782070159912,
+          "uncertainty_raw": 0.1315782070159912,
+          "train_loss": 2.780332138372022,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5043764420411023,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 1.035340436365661,
+          "uncertainty": 0.01645801030099392,
+          "uncertainty_raw": 0.01645801030099392,
+          "train_loss": 5.0530151416515485,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.37229039161350735,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 0.9769377662857635,
+          "uncertainty": 0.010083732195198536,
+          "uncertainty_raw": 0.010083732195198536,
+          "train_loss": 4.519374739040028,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.22123029584878728,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 1.8065933521125697,
+          "uncertainty": 0.02114618569612503,
+          "uncertainty_raw": 0.02114618569612503,
+          "train_loss": 4.880142699269688,
+          "mean_clip_scale": 1.0,
+          "update_norm": 1.1091667142627584,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 1.8065933521125697,
+      "epsilon_mean": 1.182887819311461,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 11.029052257537842
+    },
+    {
+      "round": 3,
+      "global": {
+        "auc_pr": 0.2494882073116692,
+        "auc_roc": 0.7364480165389168,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.29750075278530563,
+        "recall": 0.22322638951649346,
+        "precision": 0.44584837545126355,
+        "confusion": {
+          "tn": 56227,
+          "fp": 614,
+          "fn": 1719,
+          "tp": 494
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 1.1725883192571702,
+          "uncertainty": 0.023110417649149895,
+          "uncertainty_raw": 0.023110417649149895,
+          "train_loss": 3.666535572572188,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21360474758449005,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 1.265242382554296,
+          "uncertainty": 0.1321495622396469,
+          "uncertainty_raw": 0.1321495622396469,
+          "train_loss": 2.5662432631780936,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5386321785814712,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 1.2139799565417109,
+          "uncertainty": 0.015896394848823547,
+          "uncertainty_raw": 0.015896394848823547,
+          "train_loss": 4.386222724256845,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.331068936044147,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 1.1725883192571702,
+          "uncertainty": 0.008183779194951057,
+          "uncertainty_raw": 0.008183779194951057,
+          "train_loss": 3.637932311404835,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21806651607213093,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 1.9004724314363124,
+          "uncertainty": 0.021027078852057457,
+          "uncertainty_raw": 0.021027078852057457,
+          "train_loss": 3.7949385954176678,
+          "mean_clip_scale": 1.0,
+          "update_norm": 1.015643976107631,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 1.9004724314363124,
+      "epsilon_mean": 1.3449742818093318,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 11.131621360778809
+    },
+    {
+      "round": 4,
+      "global": {
+        "auc_pr": 0.2823051349133797,
+        "auc_roc": 0.7534178210768017,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.32350312779267204,
+        "recall": 0.24536827835517397,
+        "precision": 0.47465034965034963,
+        "confusion": {
+          "tn": 56240,
+          "fp": 601,
+          "fn": 1670,
+          "tp": 543
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 1.3396203939704021,
+          "uncertainty": 0.022974608466029167,
+          "uncertainty_raw": 0.022974608466029167,
+          "train_loss": 3.303213661367243,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.2156172675079303,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 1.4088480872609113,
+          "uncertainty": 0.13050657510757446,
+          "uncertainty_raw": 0.13050657510757446,
+          "train_loss": 2.2523696422576904,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5359547295186792,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 1.3740674066526963,
+          "uncertainty": 0.01584775000810623,
+          "uncertainty_raw": 0.01584775000810623,
+          "train_loss": 3.457470749986583,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.34337928628664516,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 1.3396203939704021,
+          "uncertainty": 0.00840715877711773,
+          "uncertainty_raw": 0.00840715877711773,
+          "train_loss": 3.274948997931047,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21181085589113802,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 1.9832519888632676,
+          "uncertainty": 0.02096174657344818,
+          "uncertainty_raw": 0.02096174657344818,
+          "train_loss": 3.5176446700797364,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9641802423363761,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 1.9832519888632676,
+      "epsilon_mean": 1.4890816541435359,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 12.103487014770508
+    },
+    {
+      "round": 5,
+      "global": {
+        "auc_pr": 0.30431605211802487,
+        "auc_roc": 0.7639695712029433,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.3471765760382432,
+        "recall": 0.26253953908721195,
+        "precision": 0.5123456790123457,
+        "confusion": {
+          "tn": 56288,
+          "fp": 553,
+          "fn": 1632,
+          "tp": 581
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 1.491096090910814,
+          "uncertainty": 0.022949477657675743,
+          "uncertainty_raw": 0.022949477657675743,
+          "train_loss": 2.9647011756896973,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21378536068013326,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 1.5440299940023252,
+          "uncertainty": 0.12985475361347198,
+          "uncertainty_raw": 0.12985475361347198,
+          "train_loss": 2.0952334681222604,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5270242421819563,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 1.5164360637633147,
+          "uncertainty": 0.015946557745337486,
+          "uncertainty_raw": 0.015946557745337486,
+          "train_loss": 3.265489331607161,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.32583940171582376,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 1.491096090910814,
+          "uncertainty": 0.008324753493070602,
+          "uncertainty_raw": 0.008324753493070602,
+          "train_loss": 2.4023458144881507,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21556695604390322,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.0607272447976914,
+          "uncertainty": 0.020554212853312492,
+          "uncertainty_raw": 0.020554212853312492,
+          "train_loss": 3.145933863871238,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9233674330702284,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.0607272447976914,
+      "epsilon_mean": 1.6206770968769917,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 13.815375566482544
+    },
+    {
+      "round": 6,
+      "global": {
+        "auc_pr": 0.3199435201049096,
+        "auc_roc": 0.7774340967911751,
+        "tau_source": "calibration",
+        "tau": 0.03,
+        "f1": 0.3588456712672522,
+        "recall": 0.2584726615454135,
+        "precision": 0.5866666666666667,
+        "confusion": {
+          "tn": 56438,
+          "fp": 403,
+          "fn": 1641,
+          "tp": 572
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 1.625600451651719,
+          "uncertainty": 0.02269911952316761,
+          "uncertainty_raw": 0.02269911952316761,
+          "train_loss": 2.8400204831903633,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21345454036226813,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 1.671502941919814,
+          "uncertainty": 0.12926147878170013,
+          "uncertainty_raw": 0.12926147878170013,
+          "train_loss": 2.0665898932967077,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.546057945121916,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 1.6500581479971306,
+          "uncertainty": 0.01585971750319004,
+          "uncertainty_raw": 0.01585971750319004,
+          "train_loss": 3.048499876055224,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3383715409322587,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 1.625600451651719,
+          "uncertainty": 0.008325965143740177,
+          "uncertainty_raw": 0.008325965143740177,
+          "train_loss": 3.0041245113719595,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21255414493487773,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.1354209742453785,
+          "uncertainty": 0.020436914637684822,
+          "uncertainty_raw": 0.020436914637684822,
+          "train_loss": 3.0334142010439846,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9412138814577321,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.1354209742453785,
+      "epsilon_mean": 1.741636593493152,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 12.469825506210327
+    },
+    {
+      "round": 7,
+      "global": {
+        "auc_pr": 0.33095452675998327,
+        "auc_roc": 0.7815602282591454,
+        "tau_source": "calibration",
+        "tau": 0.03,
+        "f1": 0.36705292828061387,
+        "recall": 0.26479891549932216,
+        "precision": 0.5979591836734693,
+        "confusion": {
+          "tn": 56447,
+          "fp": 394,
+          "fn": 1627,
+          "tp": 586
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 1.7531688061856283,
+          "uncertainty": 0.022373057901859283,
+          "uncertainty_raw": 0.022373057901859283,
+          "train_loss": 2.4414597858082163,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21338976891148825,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 1.792104833768594,
+          "uncertainty": 0.12769213318824768,
+          "uncertainty_raw": 0.12769213318824768,
+          "train_loss": 1.9254552985346594,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5333419457963902,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 1.7747589271220314,
+          "uncertainty": 0.01574196293950081,
+          "uncertainty_raw": 0.01574196293950081,
+          "train_loss": 3.0840766429901123,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3313877567735736,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 1.7531688061856283,
+          "uncertainty": 0.008085335604846478,
+          "uncertainty_raw": 0.008085335604846478,
+          "train_loss": 2.74492947621779,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21454331581334807,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.2049798335226387,
+          "uncertainty": 0.02027001976966858,
+          "uncertainty_raw": 0.02027001976966858,
+          "train_loss": 2.905674806850798,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9221106027132643,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.2049798335226387,
+      "epsilon_mean": 1.855636241356904,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 11.259411096572876
+    },
+    {
+      "round": 8,
+      "global": {
+        "auc_pr": 0.3374541149180674,
+        "auc_roc": 0.7832798958873498,
+        "tau_source": "calibration",
+        "tau": 0.03,
+        "f1": 0.3742177722152691,
+        "recall": 0.2702214188883868,
+        "precision": 0.6083418107833164,
+        "confusion": {
+          "tn": 56456,
+          "fp": 385,
+          "fn": 1615,
+          "tp": 598
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 1.8729704857789824,
+          "uncertainty": 0.022074291482567787,
+          "uncertainty_raw": 0.022074291482567787,
+          "train_loss": 2.566422289068049,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.2133950767004924,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 1.9065422580816693,
+          "uncertainty": 0.12604114413261414,
+          "uncertainty_raw": 0.12604114413261414,
+          "train_loss": 1.9091408668562424,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5141325384630997,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 1.8922118910074042,
+          "uncertainty": 0.015777884051203728,
+          "uncertainty_raw": 0.015777884051203728,
+          "train_loss": 2.821797691542527,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3444132045505398,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 1.8729704857789824,
+          "uncertainty": 0.008219423703849316,
+          "uncertainty_raw": 0.008219423703849316,
+          "train_loss": 2.2065290971235796,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21217995931668993,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.27371670852444,
+          "uncertainty": 0.019988369196653366,
+          "uncertainty_raw": 0.019988369196653366,
+          "train_loss": 2.819331063067212,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9153794003798188,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.27371670852444,
+      "epsilon_mean": 1.9636823658342955,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 11.153462409973145
+    },
+    {
+      "round": 9,
+      "global": {
+        "auc_pr": 0.34460156217364313,
+        "auc_roc": 0.7907231580966537,
+        "tau_source": "calibration",
+        "tau": 0.04,
+        "f1": 0.38509316770186336,
+        "recall": 0.2801626751016719,
+        "precision": 0.6156901688182721,
+        "confusion": {
+          "tn": 56454,
+          "fp": 387,
+          "fn": 1593,
+          "tp": 620
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 1.9864491467528265,
+          "uncertainty": 0.021344471722841263,
+          "uncertainty_raw": 0.021344471722841263,
+          "train_loss": 2.542806701226668,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.20857229726577184,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.0156216203730786,
+          "uncertainty": 0.12629884481430054,
+          "uncertainty_raw": 0.12629884481430054,
+          "train_loss": 1.9242831496305244,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.53403570424492,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.0036859847279134,
+          "uncertainty": 0.015645794570446014,
+          "uncertainty_raw": 0.015645794570446014,
+          "train_loss": 2.8731229634120545,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3328069424710871,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 1.9864491467528265,
+          "uncertainty": 0.008089469745755196,
+          "uncertainty_raw": 0.008089469745755196,
+          "train_loss": 2.3505475114692342,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21460704443401785,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.3397040489852663,
+          "uncertainty": 0.02023920789361,
+          "uncertainty_raw": 0.02023920789361,
+          "train_loss": 2.795999979709878,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9231012501079546,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.3397040489852663,
+      "epsilon_mean": 2.066381989518382,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 10.89432144165039
+    },
+    {
+      "round": 10,
+      "global": {
+        "auc_pr": 0.347359163553116,
+        "auc_roc": 0.7927988819193149,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.390888638920135,
+        "recall": 0.3140533212833258,
+        "precision": 0.5174981384959046,
+        "confusion": {
+          "tn": 56193,
+          "fp": 648,
+          "fn": 1518,
+          "tp": 695
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.094613333857337,
+          "uncertainty": 0.021296046674251556,
+          "uncertainty_raw": 0.021296046674251556,
+          "train_loss": 2.49332839792425,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21063789268015168,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.1200015078004584,
+          "uncertainty": 0.12500615417957306,
+          "uncertainty_raw": 0.12500615417957306,
+          "train_loss": 1.7694709966349047,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5011872033241442,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.1099802135913364,
+          "uncertainty": 0.015585829503834248,
+          "uncertainty_raw": 0.015585829503834248,
+          "train_loss": 2.6196730753471114,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3335671252352124,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.094613333857337,
+          "uncertainty": 0.008259961381554604,
+          "uncertainty_raw": 0.008259961381554604,
+          "train_loss": 2.2597581906752153,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21844634853685482,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.403903205277576,
+          "uncertainty": 0.01995576173067093,
+          "uncertainty_raw": 0.01995576173067093,
+          "train_loss": 2.662933121270993,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9220141894472078,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.403903205277576,
+      "epsilon_mean": 2.164622318876809,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 10.81993055343628
+    },
+    {
+      "round": 11,
+      "global": {
+        "auc_pr": 0.3549285328670015,
+        "auc_roc": 0.7978758785148793,
+        "tau_source": "calibration",
+        "tau": 0.03,
+        "f1": 0.3950769230769231,
+        "recall": 0.2901039313149571,
+        "precision": 0.6190935390549662,
+        "confusion": {
+          "tn": 56446,
+          "fp": 395,
+          "fn": 1571,
+          "tp": 642
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.198181282396084,
+          "uncertainty": 0.020929869264364243,
+          "uncertainty_raw": 0.020929869264364243,
+          "train_loss": 2.3886269222606313,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21233734628062542,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.2202364105123307,
+          "uncertainty": 0.12495288252830505,
+          "uncertainty_raw": 0.12495288252830505,
+          "train_loss": 1.8190884396087292,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5153820010949178,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.2118523799427554,
+          "uncertainty": 0.01576130837202072,
+          "uncertainty_raw": 0.01576130837202072,
+          "train_loss": 2.5843925599394173,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3367279026277754,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.198181282396084,
+          "uncertainty": 0.008228655904531479,
+          "uncertainty_raw": 0.008228655904531479,
+          "train_loss": 2.6426119912754404,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21259061270145627,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.4681023615698856,
+          "uncertainty": 0.01987305097281933,
+          "uncertainty_raw": 0.01987305097281933,
+          "train_loss": 2.621977888924234,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9114758210264309,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.4681023615698856,
+      "epsilon_mean": 2.259310743363428,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 12.14360237121582
+    },
+    {
+      "round": 12,
+      "global": {
+        "auc_pr": 0.3598424336157803,
+        "auc_roc": 0.8028445907167514,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.40103866128101556,
+        "recall": 0.3140533212833258,
+        "precision": 0.5546687948922586,
+        "confusion": {
+          "tn": 56283,
+          "fp": 558,
+          "fn": 1518,
+          "tp": 695
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.297743544617163,
+          "uncertainty": 0.020770901814103127,
+          "uncertainty_raw": 0.020770901814103127,
+          "train_loss": 2.467419385910034,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21189906738417577,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.3168408389121935,
+          "uncertainty": 0.12407875806093216,
+          "uncertainty_raw": 0.12407875806093216,
+          "train_loss": 1.8263877075771953,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.51012184998651,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.3098937851086414,
+          "uncertainty": 0.015692735090851784,
+          "uncertainty_raw": 0.015692735090851784,
+          "train_loss": 2.6492772266782563,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3321642872108451,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.297743544617163,
+          "uncertainty": 0.008399318903684616,
+          "uncertainty_raw": 0.008399318903684616,
+          "train_loss": 2.388317574154247,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21375641185012895,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.529111563611559,
+          "uncertainty": 0.01990317367017269,
+          "uncertainty_raw": 0.01990317367017269,
+          "train_loss": 2.597132544745417,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9145097713165798,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.529111563611559,
+      "epsilon_mean": 2.350266655373344,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 11.187893152236938
+    },
+    {
+      "round": 13,
+      "global": {
+        "auc_pr": 0.36028845035675255,
+        "auc_roc": 0.8083384993201281,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.4016830294530154,
+        "recall": 0.3235427022141889,
+        "precision": 0.5295857988165681,
+        "confusion": {
+          "tn": 56205,
+          "fp": 636,
+          "fn": 1497,
+          "tp": 716
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.3938800543005123,
+          "uncertainty": 0.020942188799381256,
+          "uncertainty_raw": 0.020942188799381256,
+          "train_loss": 2.2612688649784434,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21195555486716888,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.410213233873212,
+          "uncertainty": 0.12316340208053589,
+          "uncertainty_raw": 0.12316340208053589,
+          "train_loss": 1.7783274012942647,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5101423679509698,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.4045285198152464,
+          "uncertainty": 0.015559322200715542,
+          "uncertainty_raw": 0.015559322200715542,
+          "train_loss": 2.384330996151628,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3380067212770945,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.3938800543005123,
+          "uncertainty": 0.008064535446465015,
+          "uncertainty_raw": 0.008064535446465015,
+          "train_loss": 1.9168007319623774,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21660042738729926,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.58973550174139,
+          "uncertainty": 0.019904661923646927,
+          "uncertainty_raw": 0.019904661923646927,
+          "train_loss": 2.5542744170216953,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9097019087868375,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.58973550174139,
+      "epsilon_mean": 2.4384474728061747,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 11.486950635910034
+    },
+    {
+      "round": 14,
+      "global": {
+        "auc_pr": 0.357860095819722,
+        "auc_roc": 0.8067450111131619,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.3935340022296544,
+        "recall": 0.31902394938996836,
+        "precision": 0.5134545454545455,
+        "confusion": {
+          "tn": 56172,
+          "fp": 669,
+          "fn": 1507,
+          "tp": 706
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.486890157291663,
+          "uncertainty": 0.021089792251586914,
+          "uncertainty_raw": 0.021089792251586914,
+          "train_loss": 2.444616902958263,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21162458094918501,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.500668829242762,
+          "uncertainty": 0.12330217659473419,
+          "uncertainty_raw": 0.12330217659473419,
+          "train_loss": 1.7692057809164359,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5037712655192699,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.4961568836407038,
+          "uncertainty": 0.015632551163434982,
+          "uncertainty_raw": 0.015632551163434982,
+          "train_loss": 2.5689044903064597,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3345867430546228,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.486890157291663,
+          "uncertainty": 0.008075631223618984,
+          "uncertainty_raw": 0.008075631223618984,
+          "train_loss": 2.469077630476518,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21801864093615525,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.6503594398712202,
+          "uncertainty": 0.01988988369703293,
+          "uncertainty_raw": 0.01988988369703293,
+          "train_loss": 2.5425910060020054,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9063032744529643,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.6503594398712202,
+      "epsilon_mean": 2.524193093467603,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 22.4048810005188
+    },
+    {
+      "round": 15,
+      "global": {
+        "auc_pr": 0.3639641727599863,
+        "auc_roc": 0.8155622274620495,
+        "tau_source": "calibration",
+        "tau": 0.03,
+        "f1": 0.39242788461538464,
+        "recall": 0.29507455942159966,
+        "precision": 0.5856502242152466,
+        "confusion": {
+          "tn": 56379,
+          "fp": 462,
+          "fn": 1560,
+          "tp": 653
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.577101821358156,
+          "uncertainty": 0.02127177268266678,
+          "uncertainty_raw": 0.02127177268266678,
+          "train_loss": 2.4662806554274126,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.20761428729095643,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.5885389918127673,
+          "uncertainty": 0.12330496311187744,
+          "uncertainty_raw": 0.12330496311187744,
+          "train_loss": 1.7657360697901525,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5058542007610632,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.5850824585164456,
+          "uncertainty": 0.015349715948104858,
+          "uncertainty_raw": 0.015349715948104858,
+          "train_loss": 2.3919864605213035,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3381617945625477,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.577101821358156,
+          "uncertainty": 0.008008746430277824,
+          "uncertainty_raw": 0.008008746430277824,
+          "train_loss": 2.334188938140869,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.2139647279221749,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.708760855471593,
+          "uncertainty": 0.020039847120642662,
+          "uncertainty_raw": 0.020039847120642662,
+          "train_loss": 2.5608700312235775,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9262993545838792,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.708760855471593,
+      "epsilon_mean": 2.6073171897034237,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 82857.53384613991
+    },
+    {
+      "round": 16,
+      "global": {
+        "auc_pr": 0.36459713027996565,
+        "auc_roc": 0.8163154523054071,
+        "tau_source": "calibration",
+        "tau": 0.03,
+        "f1": 0.39078341013824885,
+        "recall": 0.28739267962042475,
+        "precision": 0.6103646833013435,
+        "confusion": {
+          "tn": 56435,
+          "fp": 406,
+          "fn": 1577,
+          "tp": 636
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.6647217697069077,
+          "uncertainty": 0.021218569949269295,
+          "uncertainty_raw": 0.021218569949269295,
+          "train_loss": 2.164161942221902,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21400512245163864,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.673983979291316,
+          "uncertainty": 0.12278284877538681,
+          "uncertainty_raw": 0.12278284877538681,
+          "train_loss": 1.7405311756355817,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.49654120619239384,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.6716201036617147,
+          "uncertainty": 0.015409174375236034,
+          "uncertainty_raw": 0.015409174375236034,
+          "train_loss": 2.5893117107194046,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3392134295645294,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.6647217697069077,
+          "uncertainty": 0.008165561594069004,
+          "uncertainty_raw": 0.008165561594069004,
+          "train_loss": 2.3604061386801978,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21314825805430826,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.7664739965425755,
+          "uncertainty": 0.019695507362484932,
+          "uncertainty_raw": 0.019695507362484932,
+          "train_loss": 2.485286899787538,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.8960801220296581,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.7664739965425755,
+      "epsilon_mean": 2.6883043237818844,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 21.026192903518677
+    },
+    {
+      "round": 17,
+      "global": {
+        "auc_pr": 0.3683043609262776,
+        "auc_roc": 0.8200131445376923,
+        "tau_source": "calibration",
+        "tau": 0.03,
+        "f1": 0.3892658852560148,
+        "recall": 0.2851333032083145,
+        "precision": 0.6132167152575316,
+        "confusion": {
+          "tn": 56443,
+          "fp": 398,
+          "fn": 1582,
+          "tp": 631
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.7500743953678635,
+          "uncertainty": 0.021195311099290848,
+          "uncertainty_raw": 0.021195311099290848,
+          "train_loss": 2.2793605869466607,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21333421965467303,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.7572341605083963,
+          "uncertainty": 0.12232203036546707,
+          "uncertainty_raw": 0.12232203036546707,
+          "train_loss": 1.7562289736991705,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5042003812320274,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.7557307206957153,
+          "uncertainty": 0.015335855074226856,
+          "uncertainty_raw": 0.015335855074226856,
+          "train_loss": 2.538802488096829,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.340972194390868,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.7500743953678635,
+          "uncertainty": 0.008042438887059689,
+          "uncertainty_raw": 0.008042438887059689,
+          "train_loss": 2.127752336588773,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.2170113849606681,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.8241871376135577,
+          "uncertainty": 0.020002417266368866,
+          "uncertainty_raw": 0.020002417266368866,
+          "train_loss": 2.4587653743870117,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.8973546951095727,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.8241871376135577,
+      "epsilon_mean": 2.7674601619106793,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 17.174498319625854
+    },
+    {
+      "round": 18,
+      "global": {
+        "auc_pr": 0.3690737803990595,
+        "auc_roc": 0.8186406929126382,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.3962729514935599,
+        "recall": 0.32670582919114327,
+        "precision": 0.5034818941504178,
+        "confusion": {
+          "tn": 56128,
+          "fp": 713,
+          "fn": 1490,
+          "tp": 723
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.833459655825586,
+          "uncertainty": 0.021345101296901703,
+          "uncertainty_raw": 0.021345101296901703,
+          "train_loss": 2.378938176415183,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21348728389027855,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.8384853862828683,
+          "uncertainty": 0.12281913310289383,
+          "uncertainty_raw": 0.12281913310289383,
+          "train_loss": 1.7578399264535238,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5102028537151947,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.8380066247427598,
+          "uncertainty": 0.015415558591485023,
+          "uncertainty_raw": 0.015415558591485023,
+          "train_loss": 2.4151540254724435,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3355893696194684,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.833459655825586,
+          "uncertainty": 0.008078115992248058,
+          "uncertainty_raw": 0.008078115992248058,
+          "train_loss": 2.133417389609597,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.2162418298604472,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.8811906992629877,
+          "uncertainty": 0.019812731072306633,
+          "uncertainty_raw": 0.019812731072306633,
+          "train_loss": 2.4835640345426166,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.90624445019967,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.8811906992629877,
+      "epsilon_mean": 2.8449204043879575,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 17.477975606918335
+    },
+    {
+      "round": 19,
+      "global": {
+        "auc_pr": 0.3666880580643414,
+        "auc_roc": 0.8196940350960205,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.3872387238723872,
+        "recall": 0.31812019882512427,
+        "precision": 0.4947294448348559,
+        "confusion": {
+          "tn": 56122,
+          "fp": 719,
+          "fn": 1509,
+          "tp": 704
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.914730649142647,
+          "uncertainty": 0.021216044202446938,
+          "uncertainty_raw": 0.021216044202446938,
+          "train_loss": 2.198937405239452,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21016828978851967,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.9179986196957115,
+          "uncertainty": 0.12249280512332916,
+          "uncertainty_raw": 0.12249280512332916,
+          "train_loss": 1.7392442891764086,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.5067562315537314,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.9181788820685597,
+          "uncertainty": 0.015155003406107426,
+          "uncertainty_raw": 0.015155003406107426,
+          "train_loss": 2.47757297959821,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3351632833298609,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.914730649142647,
+          "uncertainty": 0.008180372416973114,
+          "uncertainty_raw": 0.008180372416973114,
+          "train_loss": 2.5489402359182183,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21535354550910216,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.9364600163692693,
+          "uncertainty": 0.019770581275224686,
+          "uncertainty_raw": 0.019770581275224686,
+          "train_loss": 2.4481409582145073,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.8966464249933594,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.9364600163692693,
+      "epsilon_mean": 2.9204197632837667,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 16.053653717041016
+    },
+    {
+      "round": 20,
+      "global": {
+        "auc_pr": 0.37050019366330894,
+        "auc_roc": 0.8219375993314144,
+        "tau_source": "calibration",
+        "tau": 0.02,
+        "f1": 0.3917942791100838,
+        "recall": 0.30637144148215095,
+        "precision": 0.5432692307692307,
+        "confusion": {
+          "tn": 56271,
+          "fp": 570,
+          "fn": 1535,
+          "tp": 678
+        },
+        "prevalence": 0.03747417617773563
+      },
+      "clients": [
+        {
+          "client": 0,
+          "epsilon": 2.9943295227846147,
+          "uncertainty": 0.021186845377087593,
+          "uncertainty_raw": 0.021186845377087593,
+          "train_loss": 2.331727396358143,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.2126920470222906,
+          "n_train": 11057
+        },
+        {
+          "client": 1,
+          "epsilon": 2.9956826837761996,
+          "uncertainty": 0.12254605442285538,
+          "uncertainty_raw": 0.12254605442285538,
+          "train_loss": 1.7574871584426526,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.4991108025632025,
+          "n_train": 43289
+        },
+        {
+          "client": 2,
+          "epsilon": 2.9966983599088004,
+          "uncertainty": 0.01510370522737503,
+          "uncertainty_raw": 0.01510370522737503,
+          "train_loss": 2.586222710280583,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.3324602479207467,
+          "n_train": 29418
+        },
+        {
+          "client": 3,
+          "epsilon": 2.9943295227846147,
+          "uncertainty": 0.007984389550983906,
+          "uncertainty_raw": 0.007984389550983906,
+          "train_loss": 2.456949840892445,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.21191843434916113,
+          "n_train": 10446
+        },
+        {
+          "client": 4,
+          "epsilon": 2.9917293334755506,
+          "uncertainty": 0.019612440839409828,
+          "uncertainty_raw": 0.019612440839409828,
+          "train_loss": 2.46832228627275,
+          "mean_clip_scale": 1.0,
+          "update_norm": 0.9057852233037389,
+          "n_train": 277832
+        }
+      ],
+      "weights": [
+        0.02971976282247703,
+        0.11635514269894259,
+        0.07907171770929089,
+        0.028077475123776348,
+        0.7467759016455131
+      ],
+      "epsilon_max": 2.9966983599088004,
+      "epsilon_mean": 2.994553884545956,
+      "epsilon_uncertainty_total": 0.0,
+      "seconds": 26.971782445907593
+    }
+  ]
+}

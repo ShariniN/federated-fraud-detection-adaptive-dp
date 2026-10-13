@@ -1,0 +1,14 @@
+{
+  "name": "baseline_dp_fedavg_eps3",
+  "seed": 0,
+  "auc_pr": 0.37050019366330894,
+  "auc_roc": 0.8219375993314144,
+  "f1": 0.3917942791100838,
+  "recall": 0.30637144148215095,
+  "precision": 0.5432692307692307,
+  "epsilon_max": 2.9966983599088004,
+  "rounds": 20,
+  "best_auc_pr": 0.37050019366330894,
+  "seconds": 83135.28753709793,
+  "run_dir": "results\\federated\\baseline_dp_fedavg_eps3\\seed_0"
+}

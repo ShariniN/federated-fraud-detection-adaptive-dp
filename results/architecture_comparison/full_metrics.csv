@@ -1,0 +1,4 @@
+Architecture,Params,AUC-PR,AUC-ROC,F1_default_0.50,F1_calibrated,Best_Tau,Recall_calibrated,Precision_cal,Threshold_optimism,Epsilon,Time_s
+FraudMLP,2898,0.3675,0.8437,0.3256,0.3502,0.95,0.4623,0.2818,0.0,0.631,158.2
+Logistic Regression,146,0.2843,0.8254,0.2599,0.2884,0.95,0.3977,0.2262,0.0,0.631,111.9
+Tabular ResNet,141698,0.298,0.8318,0.291,0.3023,0.95,0.4962,0.2174,0.0,0.631,1519.3

@@ -1,0 +1,11 @@
+[21:47:54] pooled train 372,042 rows (3.47% fraud), hold-out 59,054
+[21:49:18] central_nonprivate seed 0: AUC-PR 0.4253 AUC-ROC 0.8712 F1 0.445 eps inf sigma None (85s)
+[21:50:50] central_nonprivate seed 1: AUC-PR 0.3741 AUC-ROC 0.8614 F1 0.344 eps inf sigma None (92s)
+[21:52:22] central_nonprivate seed 2: AUC-PR 0.4250 AUC-ROC 0.8733 F1 0.438 eps inf sigma None (91s)
+[21:54:49] central_dp_eps1 seed 0: AUC-PR 0.3923 AUC-ROC 0.8335 F1 0.412 eps 0.995 sigma 1.123046875 (147s)
+[21:57:36] central_dp_eps1 seed 1: AUC-PR 0.3798 AUC-ROC 0.8218 F1 0.404 eps 0.995 sigma 1.123046875 (167s)
+[22:00:42] central_dp_eps1 seed 2: AUC-PR 0.3654 AUC-ROC 0.8261 F1 0.405 eps 0.995 sigma 1.123046875 (186s)
+[21:08:25] central_dp_eps3 seed 0: AUC-PR 0.4004 AUC-ROC 0.8409 F1 0.420 eps 2.99 sigma 0.721435546875 (83263s)
+[21:16:14] central_dp_eps3 seed 1: AUC-PR 0.3822 AUC-ROC 0.8302 F1 0.405 eps 2.99 sigma 0.721435546875 (469s)
+[21:23:46] central_dp_eps3 seed 2: AUC-PR 0.3718 AUC-ROC 0.8327 F1 0.410 eps 2.99 sigma 0.721435546875 (452s)
+[21:30:53] central_dp_eps8 seed 0: AUC-PR 0.4061 AUC-ROC 0.8454 F1 0.430 eps 7.99 sigma 0.540771484375 (427s)

@@ -1,0 +1,29 @@
+[21:47:54] pool 372,042: IN 186,447 / OUT 185,595
+[21:48:34] target nonprivate: eps=inf hold-out AUC-PR=0.3964 (40s)
+[21:49:39] target dp_eps8: eps=8 hold-out AUC-PR=0.3811 (65s)
+[21:50:51] target dp_eps3: eps=3 hold-out AUC-PR=0.3707 (72s)
+[21:52:06] target dp_eps1: eps=0.993 hold-out AUC-PR=0.3492 (76s)
+[21:52:20]     shadow 1/8 trained on 186447 rows
+[21:52:35]     shadow 2/8 trained on 185623 rows
+[21:52:50]     shadow 3/8 trained on 186203 rows
+[21:53:06]     shadow 4/8 trained on 185503 rows
+[21:53:21]     shadow 5/8 trained on 186000 rows
+[21:53:36]     shadow 6/8 trained on 185689 rows
+[21:53:52]     shadow 7/8 trained on 185663 rows
+[21:54:07]     shadow 8/8 trained on 186043 rows
+[21:54:07] 8 shadow models in 121s
+[21:54:07] nonprivate: Yeom AUC=0.5012 TPR@1%=0.0106 | LiRA AUC=0.5102 TPR@0.1%=0.0000 TPR@1%=0.0249 | fraud-only LiRA AUC=0.5456
+[21:54:07] dp_eps8: Yeom AUC=0.5016 TPR@1%=0.0100 | LiRA AUC=0.5232 TPR@0.1%=0.0000 TPR@1%=0.0000 | fraud-only LiRA AUC=0.5093
+[21:54:08] dp_eps3: Yeom AUC=0.5016 TPR@1%=0.0093 | LiRA AUC=0.5233 TPR@0.1%=0.0000 TPR@1%=0.0000 | fraud-only LiRA AUC=0.5092
+[21:54:08] dp_eps1: Yeom AUC=0.5017 TPR@1%=0.0090 | LiRA AUC=0.5233 TPR@0.1%=0.0000 TPR@1%=0.0000 | fraud-only LiRA AUC=0.5097
+[21:54:09] 
+| target | epsilon | AUC-PR | Yeom AUC | Yeom TPR@1%FPR | LiRA AUC | LiRA TPR@0.1%FPR | LiRA TPR@1%FPR | LiRA AUC (fraud only) |
+|---|---|---|---|---|---|---|---|---|
+| nonprivate | inf | 0.3964 | 0.5012 | 0.0106 | 0.5102 | 0.0000 | 0.0249 | 0.5456 |
+| dp_eps8 | 7.9956 | 0.3811 | 0.5016 | 0.0100 | 0.5232 | 0.0000 | 0.0000 | 0.5093 |
+| dp_eps3 | 2.9955 | 0.3707 | 0.5016 | 0.0093 | 0.5233 | 0.0000 | 0.0000 | 0.5092 |
+| dp_eps1 | 0.9935 | 0.3492 | 0.5017 | 0.0090 | 0.5233 | 0.0000 | 0.0000 | 0.5097 |
+[21:54:12] inversion sample 67: MSE no-protection=1.474 (r=0.94) clip=3.323 clip+noise(sigma=0.81)=52.896 (r=-0.06) random-baseline=4.925
+[21:54:14] inversion sample 76: MSE no-protection=0.222 (r=0.94) clip=0.907 clip+noise(sigma=0.81)=25.239 (r=0.15) random-baseline=2.317
+[21:54:17] inversion sample 216: MSE no-protection=0.795 (r=0.95) clip=10.459 clip+noise(sigma=0.81)=48.316 (r=-0.19) random-baseline=8.849
+[21:54:17] done

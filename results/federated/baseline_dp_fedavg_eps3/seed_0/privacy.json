@@ -1,0 +1,69 @@
+{
+  "per_client": [
+    {
+      "client": 0,
+      "n_train": 11057,
+      "fraud_rate": 0.022881432576648278,
+      "batch": 1024,
+      "q": 0.09090909090909091,
+      "sigma": 2.2412109375,
+      "steps": 220,
+      "epsilon": 2.9943295227846147,
+      "delta": 1e-05
+    },
+    {
+      "client": 1,
+      "n_train": 43289,
+      "fraud_rate": 0.14657303241008107,
+      "batch": 1024,
+      "q": 0.023255813953488372,
+      "sigma": 1.2841796875,
+      "steps": 860,
+      "epsilon": 2.9956826837761996,
+      "delta": 1e-05
+    },
+    {
+      "client": 2,
+      "n_train": 29418,
+      "fraud_rate": 0.015466721055136311,
+      "batch": 1024,
+      "q": 0.034482758620689655,
+      "sigma": 1.4892578125,
+      "steps": 580,
+      "epsilon": 2.9966983599088004,
+      "delta": 1e-05
+    },
+    {
+      "client": 3,
+      "n_train": 10446,
+      "fraud_rate": 0.006988320888378327,
+      "batch": 1024,
+      "q": 0.09090909090909091,
+      "sigma": 2.2412109375,
+      "steps": 220,
+      "epsilon": 2.9943295227846147,
+      "delta": 1e-05
+    },
+    {
+      "client": 4,
+      "n_train": 277832,
+      "fraud_rate": 0.020839932045264763,
+      "batch": 1024,
+      "q": 0.003676470588235294,
+      "sigma": 0.78125,
+      "steps": 5440,
+      "epsilon": 2.9917293334755506,
+      "delta": 1e-05
+    }
+  ],
+  "ledger": {
+    "dp_sgd_epsilon_max": 2.9966983599088004,
+    "dp_sgd_delta": 1e-05,
+    "uncertainty_release_epsilon_total": 0.0,
+    "unaccounted": [
+      "imputer / scaler / PCA fitted on the training pool",
+      "decision threshold selected on calibration folds",
+      "conformal quantile (order statistic of calibration scores)"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "sigma_used": 0.8099365234375,
+  "samples": [
+    {
+      "index": 67,
+      "no_protection": {
+        "mse": 1.4737720489501953,
+        "pearson_r": 0.9427035881278518,
+        "baseline_mse_random": 4.924871777213892,
+        "final_match_loss": 1.3981317281723022
+      },
+      "clip_only": {
+        "mse": 3.3227357864379883,
+        "pearson_r": 0.7175269457074285,
+        "baseline_mse_random": 5.769664664298274,
+        "final_match_loss": 0.2763935327529907
+      },
+      "clip_plus_noise": {
+        "mse": 52.896026611328125,
+        "pearson_r": -0.06223422900535433,
+        "baseline_mse_random": 5.098889979482586,
+        "final_match_loss": 1828.0810546875
+      }
+    },
+    {
+      "index": 76,
+      "no_protection": {
+        "mse": 0.22200652956962585,
+        "pearson_r": 0.9389182949270015,
+        "baseline_mse_random": 2.3172076665571217,
+        "final_match_loss": 13.354352951049805
+      },
+      "clip_only": {
+        "mse": 0.9066187739372253,
+        "pearson_r": 0.6836627530979726,
+        "baseline_mse_random": 2.510412427834473,
+        "final_match_loss": 1.2186988592147827
+      },
+      "clip_plus_noise": {
+        "mse": 25.23907470703125,
+        "pearson_r": 0.1460192544657372,
+        "baseline_mse_random": 2.3448970295702267,
+        "final_match_loss": 1807.033447265625
+      }
+    },
+    {
+      "index": 216,
+      "no_protection": {
+        "mse": 0.79509037733078,
+        "pearson_r": 0.9476953088564449,
+        "baseline_mse_random": 8.8488928710891,
+        "final_match_loss": 0.46413785219192505
+      },
+      "clip_only": {
+        "mse": 10.45881462097168,
+        "pearson_r": 0.043003781139892554,
+        "baseline_mse_random": 9.53346760456321,
+        "final_match_loss": 0.45189693570137024
+      },
+      "clip_plus_noise": {
+        "mse": 48.31619644165039,
+        "pearson_r": -0.18708549818530595,
+        "baseline_mse_random": 10.36912919572992,
+        "final_match_loss": 1846.17724609375
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Verified working environment on the development machine (20 Sep 2026):
+#   Python 3.12.10 (CPU only). All 30 src modules import, validate_pipeline.py
+#   passes 32/32, and the three midpoint experiment scripts run end to end.
+#
+# The figures in the midpoint report were captured on 5 Sep 2026 under a
+# Python 3.14 interpreter whose package set is listed in report Table 5.1
+# (torch 2.14, scikit-learn 1.9.0, pandas 3.0.5, numpy 2.4.6). That interpreter
+# no longer has those packages installed, so the versions below are the ones
+# that are actually present and verified. Any version at or above these works.
+torch>=2.12.0
+opacus>=1.6.0
+scikit-learn>=1.8.0
+imbalanced-learn>=0.14.1
+pandas>=2.3.3
+numpy>=2.4.1
+scipy>=1.17.1
+matplotlib>=3.10.8
+seaborn>=0.13.2
+PyYAML>=6.0
+
+# Final phase only (already installed locally, not used by the midpoint scripts)
+flwr>=1.30.0

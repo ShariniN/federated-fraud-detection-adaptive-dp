@@ -1,0 +1,5 @@
+Mechanism,AUC-PR,AUC-ROC,F1_default_0.50,F1_calibrated,Best_Tau,Recall_cal,Precision_cal,SNR_ref_dB,KS_pval,Epsilon,Formal_DP,Time_s
+No Noise,0.3998,0.8557,0.2526,0.4262,0.9,0.4189,0.4338,inf,N/A,inf,no,77.9
+Gaussian,0.3748,0.8447,0.3471,0.3988,0.95,0.4663,0.3484,5.0,0.8902,0.63,yes,202.7
+Laplace,0.3919,0.8598,0.2645,0.3983,0.9,0.4026,0.3941,10.99,N/A,2.83,no,82.4
+Uniform,0.3921,0.8559,0.2466,0.3896,0.9,0.3927,0.3866,5.04,N/A,None,no,79.3
